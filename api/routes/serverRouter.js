@@ -1,14 +1,13 @@
 const serverRouter = require('express').Router()
 const { exec } = require('child_process');
 
-// llamamos a los diferentes Routers
+//creo ruta get para verificar que el servidor funciona
 serverRouter.get('/call', (req,res) => {
     res.status(200).send("Hello")
 })
 
 
 serverRouter.post('/call/:int', (req, res) => {
-    console.log(req.params)
     const { int } = req.params
     const command = `C:\\Users\\broscheitcb\\Desktop\\sipcli\\sipcli ${int} -t "prueba"`
     

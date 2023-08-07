@@ -6,7 +6,7 @@ let cors = require('cors');
 const serverRouter = require('./routes/serverRouter')
 
 const server = express();
-const port = 3000;
+const port = 3001;
 server.name = 'API';
 
 server.use(bodyParser.urlencoded({ extended:true, limit: '50mb'}));
